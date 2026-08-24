@@ -1,25 +1,25 @@
 class TorchCmd < Formula
   desc "mkdir + touch command"
   homepage "https://github.com/toshimaru/torch"
-  version "0.2.2"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.2/torch-cmd-aarch64-apple-darwin.tar.xz"
-      sha256 "6794b41a30676b6055084a0f245405c85ab42326129fb70ee15809cae58f80d6"
+      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-aarch64-apple-darwin.tar.xz"
+      sha256 "11aff258fd98d61234ddaa52f4e0d744a8c87d40f6e0481b6d427ccb3aa0e3d4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.2/torch-cmd-x86_64-apple-darwin.tar.xz"
-      sha256 "2bdc4fe261aba815ddf4c537ee3e36d25a2c4ae08759245beeea39352476dbc1"
+      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-x86_64-apple-darwin.tar.xz"
+      sha256 "7a17f639a882a12ceb1898327fc02603093115ec60e8d0852cc8df51b3c119fa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.2/torch-cmd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "def205afdc9251cfb5fae2299abb827ed7222ce31e9703acfdf71cbb17466f68"
+      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "162fd75d77612fcb1c5c4f6c9dd22fbe8f725eaf3103ce2c175c3333cdffe0fa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.2/torch-cmd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6495ef51a0ca92affc8bebe6c1c2333d29b020ce4a272de6f828cebcf5ff8225"
+      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c9a4f51054b6a1fc4e174b235c60619906c96c793e33920f7c4efee91a7cdfdd"
     end
   end
   license "MIT"
@@ -50,10 +50,18 @@ class TorchCmd < Formula
   end
 
   def install
-    bin.install "torch" if OS.mac? && Hardware::CPU.arm?
-    bin.install "torch" if OS.mac? && Hardware::CPU.intel?
-    bin.install "torch" if OS.linux? && Hardware::CPU.arm?
-    bin.install "torch" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "torch"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "torch"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "torch"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "torch"
+    end
 
     install_binary_aliases!
 
