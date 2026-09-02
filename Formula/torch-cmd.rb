@@ -1,31 +1,32 @@
 class TorchCmd < Formula
   desc "mkdir + touch command"
   homepage "https://github.com/toshimaru/torch"
-  version "0.2.3"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-aarch64-apple-darwin.tar.xz"
-      sha256 "11aff258fd98d61234ddaa52f4e0d744a8c87d40f6e0481b6d427ccb3aa0e3d4"
+      url "https://github.com/toshimaru/torch/releases/download/v0.3.0/torch-cmd-aarch64-apple-darwin.tar.xz"
+      sha256 "3daf43dd55381efda34ea28f043f91f492a7292530167f29dbeea227163c1e28"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-x86_64-apple-darwin.tar.xz"
-      sha256 "7a17f639a882a12ceb1898327fc02603093115ec60e8d0852cc8df51b3c119fa"
+      url "https://github.com/toshimaru/torch/releases/download/v0.3.0/torch-cmd-x86_64-apple-darwin.tar.xz"
+      sha256 "6a4958d4aa6246849f7c125cc6c66d71e44f5ffc3b4f5135fae07ffcb059f64f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "162fd75d77612fcb1c5c4f6c9dd22fbe8f725eaf3103ce2c175c3333cdffe0fa"
+      url "https://github.com/toshimaru/torch/releases/download/v0.3.0/torch-cmd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a0f71f69f2484fbdf0b98b6b63a5a268ceed9cced7d4fc8f05409acf7152843e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/torch/releases/download/v0.2.3/torch-cmd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c9a4f51054b6a1fc4e174b235c60619906c96c793e33920f7c4efee91a7cdfdd"
+      url "https://github.com/toshimaru/torch/releases/download/v0.3.0/torch-cmd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8138e90e9503feca9c76a3cf8d0919f0d3969a460661147d769f9e633868de50"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-pc-windows-gnu":            {},
     "aarch64-unknown-linux-gnu":         {},
     "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
