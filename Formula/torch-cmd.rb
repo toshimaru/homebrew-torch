@@ -1,25 +1,25 @@
 class TorchCmd < Formula
   desc "mkdir + touch command"
   homepage "https://github.com/toshimaru/torch"
-  version "0.3.1"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/torch/releases/download/v0.3.1/torch-cmd-aarch64-apple-darwin.tar.xz"
-      sha256 "7d0b108c4519419c4b2a40ab2914bed099d600003da37ec0d90e56a71f97047a"
+      url "https://github.com/toshimaru/torch/releases/download/v0.4.0/torch-cmd-aarch64-apple-darwin.tar.xz"
+      sha256 "1cec6406384c6b223600b6408e32686d9d3c89a6497ccf79017d9bb459386c6b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/torch/releases/download/v0.3.1/torch-cmd-x86_64-apple-darwin.tar.xz"
-      sha256 "9232b3e2b8a7f2736e5ad6780209ce81a376308190446036e468df177e127cce"
+      url "https://github.com/toshimaru/torch/releases/download/v0.4.0/torch-cmd-x86_64-apple-darwin.tar.xz"
+      sha256 "8f3a7ea44b3a08f4e245e6fa13923da0635c7bc0a43d2b08bdefd7dc5b747b72"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/torch/releases/download/v0.3.1/torch-cmd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1c4e64c449afa9b5972583a5a3ec410cf4a32dfe7e059a47c7477233f1d84384"
+      url "https://github.com/toshimaru/torch/releases/download/v0.4.0/torch-cmd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "028b94d3c329efd2cbbd28ca61336666b1ad708beb16161d1e3ba8986693f56f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/torch/releases/download/v0.3.1/torch-cmd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "10e67e33cda4f822ac05c76945e433cd6437bc683ac17825688e784c3618aa73"
+      url "https://github.com/toshimaru/torch/releases/download/v0.4.0/torch-cmd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "63e0c3a688c3895de8915b1135ca95179579c815cc1888e8e068bedc684a0e23"
     end
   end
   license "MIT"
